@@ -10,7 +10,7 @@ import Iconr from 'react-native-vector-icons/dist/FontAwesome5';
 
 const Plan = () => {
   return (
-    <View style={{height: responsiveHeight(45)}}>
+    <View style={{height: responsiveHeight(45), backgroundColor: 'white'}}>
       <View>
         <View
           style={{
@@ -159,14 +159,19 @@ const Plan = () => {
           </View>
         </View>
 
-        <View style={{ flexDirection: 'row',alignSelf:'center',marginTop:responsiveHeight(2)}}>
+        <View
+          style={{
+            flexDirection: 'row',
+            alignSelf: 'center',
+            marginTop: responsiveHeight(2),
+          }}>
           <Text
             style={{
               textAlign: 'left',
               color: 'black',
               fontWeight: '600',
               fontSize: responsiveFontSize(2),
-            //   marginRight: responsiveWidth(5),
+              //   marginRight: responsiveWidth(5),
             }}>
             Offer Expires in
           </Text>
@@ -193,6 +198,8 @@ export default Plan;
 const styles = StyleSheet.create({
   textbox: {
     marginLeft: responsiveWidth(1),
-    textAlign: 'center',
+    textAlign: 'left',
+    flexShrink: 1,
+    flexWrap: 'wrap',
   },
 });

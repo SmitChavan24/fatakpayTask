@@ -4,7 +4,7 @@ import {responsiveFontSize, responsiveHeight, responsiveWidth} from 'react-nativ
 import Icon from 'react-native-vector-icons/dist/Foundation';
 const SubHeader = () => {
   return (
-    <View style={{height: responsiveHeight(30)}}>
+    <View style={{height: responsiveHeight(30),backgroundColor:'white'}}>
     <View style={{flex:1,justifyContent:'space-between'}}>
       <View style={{marginLeft:responsiveWidth(5),marginTop:responsiveHeight(3)}}>
         <Text style={{textAlign: 'left',color:'#44226E',fontSize:responsiveFontSize(2.4),fontWeight:'500',marginBottom:responsiveHeight(0.5)}}>Select Loan amount</Text>
