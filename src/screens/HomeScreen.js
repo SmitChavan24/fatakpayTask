@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Header from '../components/Header'
 import SubHeader from '../components/SubHeader'
+import Plan from '../components/Plan'
 
 
 const HomeScreen = () => {
@@ -9,6 +10,7 @@ const HomeScreen = () => {
     <View style={{}}>
      <Header/>
      <SubHeader/>
+     <Plan/>
     </View>
   )
 }
