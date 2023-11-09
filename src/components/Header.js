@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <LinearGradient
       start={{x: 0, y: 1}}
-      end={{x: 2, y: 0}}
+      end={{x: 3, y: 0}}
       colors={['#44226E', '#868686']}
       style={styles.linearGradient}>
       <View style={{flex: 1, alignItems: 'center', marginTop: responsiveHeight(5)}}>
@@ -22,6 +22,7 @@ const Header = () => {
             fontSize: responsiveFontSize(2),
             fontWeight: '400',
             fontFamily: 'serif',
+            textAlign:'center'
           }}>
           Approved Loan
         </Text>
@@ -34,7 +35,8 @@ const Header = () => {
             fontWeight: 'bold',
             fontFamily: 'serif',
             marginLeft:responsiveWidth(2),
-            marginBottom:responsiveHeight(0.5)
+            marginBottom:responsiveHeight(0.5),
+            textAlign:'center'
           }}>
         50,000
         </Text>
