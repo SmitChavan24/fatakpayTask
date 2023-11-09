@@ -88,11 +88,12 @@ const Plan = () => {
               margin: responsiveWidth(1),
               justifyContent: 'space-evenly',
               alignItems: 'center',
-              backgroundColor: 'orange',
+              backgroundColor: '#F1C27C',
+              borderColor: 'orange',
+              borderWidth: responsiveWidth(0.3),
               borderRadius: responsiveWidth(2),
             }}>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
-              <Iconr name="rupee-sign" size={10} color="black"></Iconr>
               <Text style={styles.textbox}>3</Text>
             </View>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -106,7 +107,7 @@ const Plan = () => {
             <Icon
               name="checkmark-circle-sharp"
               size={responsiveWidth(5)}
-              color="green"></Icon>
+              color="#4FBC0C"></Icon>
           </View>
           <View
             style={{
@@ -116,7 +117,6 @@ const Plan = () => {
               alignItems: 'center',
             }}>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
-              <Iconr name="rupee-sign" size={10} color="black"></Iconr>
               <Text style={styles.textbox}>6</Text>
             </View>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -130,18 +130,16 @@ const Plan = () => {
             <Icon
               name="checkmark-circle-sharp"
               size={responsiveWidth(5)}
-              color="green"></Icon>
+              color="#4FBC0C"></Icon>
           </View>
           <View
             style={{
               flex: 1,
               margin: responsiveWidth(0.5),
               justifyContent: 'space-evenly',
-              alignItems: 'center',
-              marginBottom: responsiveHeight(1),
+              alignItems: 'center', 
             }}>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
-              <Iconr name="rupee-sign" size={10} color="black"></Iconr>
               <Text style={styles.textbox}>9</Text>
             </View>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -155,7 +153,7 @@ const Plan = () => {
             <Icon
               name="checkmark-circle-sharp"
               size={responsiveWidth(5)}
-              color="green"></Icon>
+              color="#4FBC0C"></Icon>
           </View>
         </View>
 
@@ -171,7 +169,6 @@ const Plan = () => {
               color: 'black',
               fontWeight: '600',
               fontSize: responsiveFontSize(2),
-              //   marginRight: responsiveWidth(5),
             }}>
             Offer Expires in
           </Text>
@@ -198,8 +195,9 @@ export default Plan;
 const styles = StyleSheet.create({
   textbox: {
     marginLeft: responsiveWidth(1),
-    textAlign: 'left',
-    flexShrink: 1,
-    flexWrap: 'wrap',
+    textAlign: 'center',
+    width: responsiveWidth(11),
+    color: 'black',
+    fontSize:responsiveFontSize(1.6)
   },
 });
