@@ -137,7 +137,7 @@ const Plan = () => {
               flex: 1,
               margin: responsiveWidth(0.5),
               justifyContent: 'space-evenly',
-              alignItems: 'center', 
+              alignItems: 'center',
             }}>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <Text style={styles.textbox}>9</Text>
@@ -198,6 +198,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     width: responsiveWidth(11),
     color: 'black',
-    fontSize:responsiveFontSize(1.6)
+    fontSize: responsiveFontSize(1.6),
   },
 });

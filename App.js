@@ -1,15 +1,15 @@
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import HomeScreen from './src/screens/HomeScreen'
+import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+import HomeScreen from './src/screens/HomeScreen';
 
 const App = () => {
   return (
     <SafeAreaView>
-      <HomeScreen/>
+      <HomeScreen />
     </SafeAreaView>
-  )
-}
+  );
+};
 
-export default App
+export default App;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

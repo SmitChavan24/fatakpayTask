@@ -3,10 +3,10 @@ import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/dist/FontAwesome5';
 import {
-    responsiveHeight,
-    responsiveWidth,
-    responsiveFontSize
-  } from "react-native-responsive-dimensions";
+  responsiveHeight,
+  responsiveWidth,
+  responsiveFontSize,
+} from 'react-native-responsive-dimensions';
 
 const Header = () => {
   return (
@@ -15,31 +15,37 @@ const Header = () => {
       end={{x: 3, y: 0}}
       colors={['#44226E', '#868686']}
       style={styles.linearGradient}>
-      <View style={{flex: 1, alignItems: 'center', marginTop: responsiveHeight(5)}}>
+      <View
+        style={{flex: 1, alignItems: 'center', marginTop: responsiveHeight(5)}}>
         <Text
           style={{
             color: 'white',
             fontSize: responsiveFontSize(2),
             fontWeight: '400',
             fontFamily: 'serif',
-            textAlign:'center'
+            textAlign: 'center',
           }}>
           Approved Loan
         </Text>
-        <View style={{flexDirection:'row',alignItems:'center',marginRight:responsiveWidth(5)}}>
-        <Icon name='rupee-sign' size={45} color='white' ></Icon>
-        <Text
+        <View
           style={{
-            color: 'white',
-            fontSize: responsiveFontSize(7),
-            fontWeight: 'bold',
-            fontFamily: 'serif',
-            marginLeft:responsiveWidth(2),
-            marginBottom:responsiveHeight(0.5),
-            textAlign:'center'
+            flexDirection: 'row',
+            alignItems: 'center',
+            marginRight: responsiveWidth(5),
           }}>
-        50,000
-        </Text>
+          <Icon name="rupee-sign" size={45} color="white"></Icon>
+          <Text
+            style={{
+              color: 'white',
+              fontSize: responsiveFontSize(7),
+              fontWeight: 'bold',
+              fontFamily: 'serif',
+              marginLeft: responsiveWidth(2),
+              marginBottom: responsiveHeight(0.5),
+              textAlign: 'center',
+            }}>
+            50,000
+          </Text>
         </View>
       </View>
     </LinearGradient>
