@@ -126,8 +126,8 @@ const Plan = () => {
               alignItems: 'center',
               ...(plan == '3Month'
                 ? {
-                    backgroundColor: '#F1C27C',
-                    borderColor: 'orange',
+                    backgroundColor: '#FFE097',
+                    borderColor: '#FFC637',
                     borderWidth: responsiveWidth(0.3),
                     borderRadius: responsiveWidth(2),
                   }
@@ -176,8 +176,8 @@ const Plan = () => {
               alignItems: 'center',
               ...(plan == '6Month'
                 ? {
-                    backgroundColor: '#F1C27C',
-                    borderColor: 'orange',
+                    backgroundColor: '#FFE097',
+                    borderColor: '#FFC637',
                     borderWidth: responsiveWidth(0.3),
                     borderRadius: responsiveWidth(2),
                   }
@@ -227,8 +227,8 @@ const Plan = () => {
               alignItems: 'center',
               ...(plan == '9Month'
                 ? {
-                    backgroundColor: '#F1C27C',
-                    borderColor: 'orange',
+                    backgroundColor: '#FFE097',
+                    borderColor: '#FFC637',
                     borderWidth: responsiveWidth(0.3),
                     borderRadius: responsiveWidth(2),
                   }
