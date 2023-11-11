@@ -315,5 +315,6 @@ const styles = StyleSheet.create({
     width: responsiveWidth(11),
     color: 'black',
     fontSize: responsiveFontSize(1.6),
+    fontWeight:'400'
   },
 });
