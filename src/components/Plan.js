@@ -46,77 +46,19 @@ const Plan = () => {
     setplan(selectedplan);
   };
   return (
-    <View style={{height: responsiveHeight(45), backgroundColor: 'white'}}>
+    <View style={styles.main}>
       <View>
-        <View
-          style={{
-            marginLeft: responsiveWidth(5),
-            marginTop: responsiveHeight(3),
-          }}>
-          <Text
-            style={{
-              textAlign: 'left',
-              color: '#44226E',
-              fontSize: responsiveFontSize(2.4),
-              fontWeight: '500',
-              marginBottom: responsiveHeight(0.5),
-            }}>
-            Select Tenure
-          </Text>
-          <Text
-            style={{
-              textAlign: 'left',
-              color: 'grey',
-              fontSize: responsiveFontSize(2),
-              fontWeight: '400',
-            }}>
+        <View style={styles.header}>
+          <Text style={styles.textheader}>Select Tenure</Text>
+          <Text style={styles.subheader}>
             Choose your preferred terms in months
           </Text>
         </View>
-        <View
-          style={{
-            flexDirection: 'row',
-            height: responsiveHeight(30),
-            width: responsiveWidth(90),
-            marginTop: responsiveHeight(1),
-            alignSelf: 'center',
-            borderRadius: responsiveWidth(2),
-            borderColor: 'grey',
-            borderWidth: responsiveWidth(0.2),
-          }}>
-          <View
-            style={{
-              flex: 1,
-              margin: responsiveWidth(0.5),
-              flexDirection: 'column',
-              justifyContent: 'space-evenly',
-              alignItems: 'center',
-              marginBottom: responsiveHeight(7),
-            }}>
-            <Text
-              style={{
-                fontWeight: '400',
-                fontSize: responsiveFontSize(2),
-                color: 'black',
-              }}>
-              Months
-            </Text>
-            <Text
-              style={{
-                fontWeight: '400',
-                fontSize: responsiveFontSize(2),
-                color: 'black',
-              }}>
-              Emi
-            </Text>
-            <Text
-              style={{
-                fontWeight: '400',
-                fontSize: responsiveFontSize(2),
-                color: 'black',
-              }}>
-              Total
-            </Text>
+        <View style={styles.selectorContainer}>
+          <View style={styles.flexContainer}>
+            <Text style={styles.textselector}>Months</Text>
+            <Text style={styles.textselector}>Emi</Text>
+            <Text style={styles.textselector}>Total</Text>
           </View>
           <TouchableOpacity
             style={{
@@ -134,7 +76,7 @@ const Plan = () => {
                 : {}),
             }}
             onPress={() => onSelectPlan('3Month')}>
-            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <View style={styles.viewCollage}>
               <Text
                 style={[
                   styles.textbox,
@@ -143,7 +85,7 @@ const Plan = () => {
                 3
               </Text>
             </View>
-            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <View style={styles.viewCollage}>
               <Iconr name="rupee-sign" size={10} color="black"></Iconr>
               <Text
                 style={[
@@ -153,7 +95,7 @@ const Plan = () => {
                 6,000
               </Text>
             </View>
-            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <View style={styles.viewCollage}>
               <Iconr name="rupee-sign" size={10} color="black"></Iconr>
               <Text
                 style={[
@@ -184,7 +126,7 @@ const Plan = () => {
                 : {}),
             }}
             onPress={() => onSelectPlan('6Month')}>
-            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <View style={styles.viewCollage}>
               <Text
                 style={[
                   styles.textbox,
@@ -193,7 +135,7 @@ const Plan = () => {
                 6
               </Text>
             </View>
-            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <View style={styles.viewCollage}>
               <Iconr name="rupee-sign" size={10} color="black"></Iconr>
               <Text
                 style={[
@@ -203,7 +145,7 @@ const Plan = () => {
                 3,500
               </Text>
             </View>
-            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <View style={styles.viewCollage}>
               <Iconr name="rupee-sign" size={10} color="black"></Iconr>
               <Text
                 style={[
@@ -235,7 +177,7 @@ const Plan = () => {
                 : {}),
             }}
             onPress={() => onSelectPlan('9Month')}>
-            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <View style={styles.viewCollage}>
               <Text
                 style={[
                   styles.textbox,
@@ -244,7 +186,7 @@ const Plan = () => {
                 9
               </Text>
             </View>
-            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <View style={styles.viewCollage}>
               <Iconr name="rupee-sign" size={10} color="black"></Iconr>
               <Text
                 style={[
@@ -254,7 +196,7 @@ const Plan = () => {
                 2,200
               </Text>
             </View>
-            <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <View style={styles.viewCollage}>
               <Iconr name="rupee-sign" size={10} color="black"></Iconr>
               <Text
                 style={[
@@ -272,30 +214,9 @@ const Plan = () => {
         </View>
 
         {timer != '0' ? (
-          <View
-            style={{
-              flexDirection: 'row',
-              alignSelf: 'center',
-              marginTop: responsiveHeight(2),
-            }}>
-            <Text
-              style={{
-                textAlign: 'left',
-                color: 'black',
-                fontWeight: '600',
-                fontSize: responsiveFontSize(2),
-              }}>
-              Offer Expires in
-            </Text>
-            <Text
-              style={{
-                textAlign: 'left',
-                color: 'black',
-                fontWeight: '600',
-                fontSize: responsiveFontSize(2),
-                marginRight: responsiveWidth(5),
-                color: '#44226E',
-              }}>
+          <View style={styles.footer}>
+            <Text style={styles.footerText}>Offer Expires in</Text>
+            <Text style={styles.footerTimerText}>
               {' '}
               {formatTime(timer)} secs
             </Text>
@@ -315,6 +236,73 @@ const styles = StyleSheet.create({
     width: responsiveWidth(11),
     color: 'black',
     fontSize: responsiveFontSize(1.6),
-    fontWeight:'400'
+    fontWeight: '400',
+  },
+  main: {
+    height: responsiveHeight(45),
+    backgroundColor: 'white',
+  },
+  header: {
+    marginLeft: responsiveWidth(5),
+    marginTop: responsiveHeight(3),
+  },
+  textheader: {
+    textAlign: 'left',
+    color: '#44226E',
+    fontSize: responsiveFontSize(2.4),
+    fontWeight: '500',
+    marginBottom: responsiveHeight(0.5),
+  },
+  subheader: {
+    textAlign: 'left',
+    color: 'grey',
+    fontSize: responsiveFontSize(2),
+    fontWeight: '400',
+  },
+  selectorContainer: {
+    flexDirection: 'row',
+    height: responsiveHeight(30),
+    width: responsiveWidth(90),
+    marginTop: responsiveHeight(1),
+    alignSelf: 'center',
+    borderRadius: responsiveWidth(2),
+    borderColor: 'grey',
+    borderWidth: responsiveWidth(0.2),
+  },
+  flexContainer: {
+    flex: 1,
+    margin: responsiveWidth(0.5),
+    flexDirection: 'column',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    marginBottom: responsiveHeight(7),
+  },
+  textselector: {
+    fontWeight: '400',
+    fontSize: responsiveFontSize(2),
+    color: 'black',
+  },
+  viewCollage: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  footer: {
+    flexDirection: 'row',
+    alignSelf: 'center',
+    marginTop: responsiveHeight(2),
+  },
+  footerText: {
+    textAlign: 'left',
+    color: 'black',
+    fontWeight: '600',
+    fontSize: responsiveFontSize(2),
+  },
+  footerTimerText: {
+    textAlign: 'left',
+    color: 'black',
+    fontWeight: '600',
+    fontSize: responsiveFontSize(2),
+    marginRight: responsiveWidth(5),
+    color: '#44226E',
   },
 });
